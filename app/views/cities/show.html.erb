@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @city.name %>
+</p>
+
+<h4>List of Cities</h4>
+
+<% if @city.monsters.any? %>
+  <ul>
+    <% @city.monsters.each do |monster| %>
+      <li><%= monster.name %></li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>There are no monsters in this city.</p>
+    <% end %>
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>
