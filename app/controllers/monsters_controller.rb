@@ -20,6 +20,25 @@ class MonstersController < ApplicationController
       render 'new'
     end
   end
+  def edit
+    @monster = Monster.find(params[:id])
+  end
+  def update
+    @monster = Monster.find(params[:id])
+
+    if @monster.update_attributes(monster_params)
+      redirect_to @monster
+    else
+      render 'edit'
+    end
+  end
+  def destroy
+    @monster = Monster.find(params[:id])
+
+    @monster.destroy
+
+    redirect_to monsters_path
+  end
 
   private
 

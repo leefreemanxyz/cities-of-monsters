@@ -13,3 +13,6 @@
         </div>
       </div>
     </div>
+
+    <%= link_to "Edit", edit_monster_path(@monster.id) %>
+    <%= link_to "Delete", monster_path(@monster.id), method: :delete, data:{confirm: "Are you sure?"} %>
