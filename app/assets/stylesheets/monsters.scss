@@ -1,3 +1,60 @@
 // Place all the styles related to the Monsters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* banner */
+
+.banner{
+  padding:40px 0 20px;
+  text-align:center;
+  animation: monsterBanner 3s ease infinite alternate;
+}
+.banner{
+  color:white;
+}
+/* gradient banner */
+@keyframes monsterBanner{
+  0%{background:rgb(115, 30, 27)}
+  100%{background:rgb(210, 47, 47)}
+}
+
+/* monsters */
+.monsters{
+  display:flex;
+  flex-direction: column;
+}
+.monster{
+  background-color:#dddddd;
+  margin:20px;
+  display:flex;
+  align-items: center;
+}
+.monster-img{
+  padding:30px;
+  img {
+    max-width: 100px;
+  }
+}
+.monster-footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.monster-food{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  display:flex;
+}
+.monster-food li{
+  color: rgb(210, 47, 47);
+  padding-right:20px;
+}
+.learn-more{
+  color:white;
+  background-color: rgb(210, 47, 47);
+  border:none;
+  padding:15px 30px;
+  margin:10px;
+  text-align:center;
+  text-decoration: none;
+}

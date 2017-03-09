@@ -1,21 +1,29 @@
 <p id="notice"><%= notice %></p>
+<h3><%= @city.name %></h3>
 
-<p>
-  <strong>Name:</strong>
-  <%= @city.name %>
-</p>
 
-<h4>List of Cities</h4>
 
 <% if @city.monsters.any? %>
-  <ul>
     <% @city.monsters.each do |monster| %>
-      <li><%= monster.name %></li>
+    <div class="monster">
+          <div class="monster-img"><%= image_tag(monster.image_url) %></div>
+          <div class="monster-info">
+            <h3 class="monster-name"><%= monster.name %></h3>
+            <p class="monster-description">Lives in <%= monster.city.name %></p>
+            <hr>
+            <div class="monster-footer">
+              <ul class="monster-food">
+                <li>Carrion</li>
+                <li>Plants</li>
+              </ul>
+              <button class="learn-more"><%= link_to "Discover more", monster_path(monster.id) %></button>
+            </div>
+          </div>
+        </div>
+
       <% end %>
-    </ul>
     <% else %>
     <p>There are no monsters in this city.</p>
     <% end %>
 
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
+<%= link_to 'Edit', edit_city_path(@city) %> | <%= link_to 'Back', cities_path %>

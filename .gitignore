@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+#ignore images
+app/assets/images/
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

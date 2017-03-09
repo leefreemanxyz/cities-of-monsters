@@ -1,3 +1,32 @@
 // Place all the styles related to the Cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* gallery */
+.city-gallery{
+  flex:1;
+  padding:20px;
+  display:flex;
+  flex-wrap:wrap;
+
+}
+
+.city-card{
+  background-color: #ececec;
+  width:calc(100%/4 - 40px);
+  padding:20px;
+  border-radius:4px;
+  margin:20px;
+}
+.city-img{
+  height:150px;
+  overflow:hidden;
+}
+
+.city-button{
+  display:inline-block;
+  background-color: #d32f2f;
+  color:#fff;
+  padding:10px;
+  border-radius:4px;
+}

@@ -1,15 +1,15 @@
 <div class="monster">
-      <div class="monster-img"><img src="images/valleys-of-monstersaurs-logo.svg" alt=""></div>
+      <div class="monster-img"><%= image_tag(@monster.image_url) %></div>
       <div class="monster-info">
         <h3 class="monster-name"><%= @monster.name %></h3>
-        <p class="monster-description">Abrictosaurus was a small dinosaur that lived in the early Jurassic period, between about 199 and 196 million years ago. Abrictosaurus was quite small. It was about 1.2 meters long, and weighed onl 45 kilograms.</p>
+        <p class="monster-description">Lives in <%= @monster.city.name %></p>
         <hr>
         <div class="monster-footer">
           <ul class="monster-food">
             <li>Carrion</li>
             <li>Plants</li>
           </ul>
-          <button class="learn-more"><%= link_to "Learn more", monster_path(@monster.id) %></button>
+          
         </div>
       </div>
     </div>

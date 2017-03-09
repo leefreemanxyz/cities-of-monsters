@@ -1,26 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Cities</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cities.each do |city| %>
-      <tr>
-        <td><%= city.name %></td>
-        <td><%= link_to 'Show', city %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<section class="city-gallery">
+<% @cities.each do |city| %>
+  <article class="city-card">
+    <div class="city-img"><img src="" alt=""></div>
+    <h2><%= city.name %></h2>
+    <%= link_to "Discover", city_path(city.id) %>
+  </article>
+  <% end %>
+</section>
 
 <br>
 

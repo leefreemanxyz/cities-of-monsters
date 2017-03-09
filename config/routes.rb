@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :cities
-  root "monsters#index"
+  root "cities#index"
   get "contact" => "pages#contact"
   get "about" => "pages#about"
 
