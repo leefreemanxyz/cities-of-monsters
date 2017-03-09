@@ -1,0 +1,47 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* fonts */
+body{
+  font-family: 'Nunito', sans-serif;
+  line-height:1.6;
+  font-size: 14px;
+  display:flex;
+  flex-direction:column;
+  min-height: 100vh;
+}
+
+/* links */
+a{
+  text-decoration: none;
+}
+
+/* header */
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav{
+  list-style-type:none;
+  padding:0;
+  display:flex;
+}
+
+header nav li {
+  margin-right:20px;
+}
+header h1{
+  padding-left:10px;
+}
+header h1 a {
+  color: #4a4a4a;
+}
+header nav a {
+  color: #f5b723;
+}
